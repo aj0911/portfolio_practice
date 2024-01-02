@@ -1,0 +1,157 @@
+/* Importing Css fonts */
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+
+/* Universal Styling */
+*{
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+/* Root Variables */
+:root{
+    --bgColor:black;
+    --primaryColor:white;
+    --secColor:#C50FEC;
+    --textColor:#22201D;
+    --transition:all .4s;
+}
+
+/* Body */
+body{
+    background-color: var(--bgColor);
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar{
+    display: none;
+}
+
+.wrapper{
+    display: flex;
+    /* main axis (direction) ---> justify content */
+    /* not main axis --> align items */
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+/* Header Section Starts */
+
+.wrapper header{
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: fixed;
+    background-color: var(--bgColor);
+}
+
+.wrapper header .logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.wrapper header .logo .square{
+    transition: var(--transition);
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-color: var(--primaryColor);
+}
+
+.wrapper header .logo:hover .square{
+    background-color: var(--secColor);
+}
+
+.wrapper header .logo h1{
+    color: var(--primaryColor);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
+    transition: var(--transition);
+}
+.wrapper header .logo:hover h1{
+    color: var(--secColor);
+}
+.wrapper header .logo:hover h1::after{
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    animation: animateLogo .4s ease-in forwards;
+    height: 2px;
+    background-color: var(--secColor);
+    /* Mandatory property is content */
+    content: '';
+}
+
+.wrapper header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.wrapper header nav a{
+    color: var(--primaryColor);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    padding-bottom:10px;
+    position: relative;
+}
+.wrapper header nav a:hover::after{
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    animation: animateLogo .4s ease-in forwards;
+    height: 2px;
+    background-color: var(--secColor);
+    /* Mandatory property is content */
+    content: '';
+}
+
+.wrapper header nav a:hover{
+    color: var(--secColor);
+}
+
+.wrapper header button{
+    padding: 5px 20px;
+    text-transform: uppercase;
+    color: var(--bgColor);
+    font-weight: 600;
+    font-size: 1.1rem;
+    background-color: var(--primaryColor);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.wrapper header button:hover{
+    transform: scale(1.05);
+    background-color: var(--secColor);
+    color: var(--primaryColor);
+}
+/* Header Section Ends */
+
+
+/* Animations */
+@keyframes animateLogo {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+/* End Animations */
