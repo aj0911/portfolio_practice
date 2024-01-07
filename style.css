@@ -145,6 +145,119 @@ body{
 /* Header Section Ends */
 
 
+/* Footer Section Starts */
+footer{
+    width: 100%;
+    display: flex;
+    gap: 4rem;
+    padding: 100px 5%;
+    background-color: var(--secColor);
+}
+footer .left{
+    width: calc(50% - 2rem);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4rem;
+}
+footer .left .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+footer .left .content h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--primaryColor);
+    border-bottom: 2px solid var(--primaryColor);
+    padding-bottom: 5px;
+    margin-bottom: 1rem;
+}
+footer .left .content a{
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--primaryColor);
+    margin-bottom: .5rem;
+    transition: var(--transition);
+}
+
+footer .left .content a:hover{
+    color: var(--textColor);
+}
+
+footer .right{
+    width: calc(50% - 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+footer .right h3{
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--primaryColor);
+}
+
+footer .right .lineElement{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: .5rem;
+}
+footer .right .lineElement .line{
+    width: 50px;
+    height: 2px;
+    background-color: var(--primaryColor);
+}
+
+footer .right .box{
+    width: 70%;
+    height: 40px;
+    border: 2px solid var(--primaryColor);
+    margin: 2rem 0;
+}
+
+footer .right .icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 70%;
+}
+
+footer .right .icons h3{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer .right .icons a{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--secColor);
+    background-color: var(--primaryColor);
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+footer .right .icons a:hover{
+    background-color: var(--textColor);
+    color: var(--primaryColor);
+    transform: scale(1.2);
+}
+
+/* Footer Section Ends */
+
+
 /* Animations */
 @keyframes animateLogo {
     0%{
