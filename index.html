@@ -21,15 +21,16 @@
                 <a href="">Blog</a>
             </nav>
             <button>Sign In</button>
+            <div class="menu"></div>
         </header>
         <Section id="Hero">
             <div class="top">
                 <div class="pro">
                     <div class="square"></div>
                     <h3>Become a Pro designer</h3>
-                    <i class="fa-brands fa-long-arrow-left"></i>
+                    <i class="fa fa-long-arrow-left"></i>
                 </div>
-                <img src="./Assets/hero.png" alt="">
+                <div class="img"></div>
                 <div class="content">
                     <h3>start guide for beginner designers</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem a atque dicta quia tempore perferendis neque maiores quibusdam velit quo?</p>
@@ -37,9 +38,9 @@
                         <button>Lets Start</button>
                         <button>Read More</button>
                     </div>
-                    <i class="fa-brands fa-long-arrow-right"></i>
+                    <i class="fa fa-long-arrow-right"></i>
                 </div>
-                <h3>UI.</h3>
+                <h3>UI<span>.</span></h3>
                 <h2>BEGINNER <span>'s</span></h2>
                 <div class="box">
                     <h3>Edition</h3>
@@ -98,12 +99,17 @@
                 <div class="box"></div>
                 <div class="icons">
                     <h3>follow us!</h3>
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-youtube"></i></a>
                 </div>
             </div>
         </footer>
     </div>
+    <script>
+        document.querySelector('.wrapper .menu').addEventListener('click',()=>{
+            document.querySelector('.wrapper').classList.toggle('active')
+        })
+    </script>
 </body>
 </html>
